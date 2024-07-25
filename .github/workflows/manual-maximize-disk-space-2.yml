@@ -3,10 +3,10 @@ name: Test to maximize disk space 2
 on: [ workflow_dispatch ]
 
 jobs:
-  build-people:
+  maximize-disk-space:
     runs-on: ubuntu-20.04
     steps:
-    - name: Maximize build space
+    - name: Maximize disk space
       run:  |
             sudo docker rmi $(docker image ls -aq)
             sudo apt purge -y \
